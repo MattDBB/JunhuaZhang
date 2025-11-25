@@ -4,28 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>张隽华 - 资深运营主管简历</title>
-    <!-- 引入 Tailwind CSS 进行快速样式开发 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 FontAwesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            /* 参考上传图片的配色风格：干净的背景 + 科技蓝/紫色点缀 */
             --primary-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
             --text-gradient: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
         }
 
         body {
             font-family: 'Noto Sans SC', sans-serif;
-            background-color: #f8fafc; /* 极浅的灰白色背景，参考上传图片 */
+            background-color: #f8fafc;
             color: #1e293b;
             overflow-x: hidden;
         }
 
-        /* 动态波浪背景 - 模拟 AI 科技感 */
+        /* 动态波浪背景 */
         .tech-bg {
             position: fixed;
             top: 0;
@@ -63,7 +59,6 @@
             100% { transform: translateX(0); }
         }
 
-        /* 渐变字体类 */
         .gradient-text {
             background: var(--text-gradient);
             -webkit-background-clip: text;
@@ -72,7 +67,6 @@
             font-weight: 800;
         }
 
-        /* 打字机光标 */
         .cursor {
             display: inline-block;
             width: 3px;
@@ -87,7 +81,6 @@
             50% { opacity: 0; }
         }
 
-        /* 磨砂玻璃卡片 */
         .glass-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
@@ -95,7 +88,6 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
 
-        /* 侧边栏抽屉动画 */
         .drawer {
             transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -104,7 +96,6 @@
             transform: translateX(0);
         }
         
-        /* 隐藏滚动条但保留功能 */
         .hide-scrollbar::-webkit-scrollbar {
             width: 6px;
         }
@@ -116,7 +107,6 @@
             border-radius: 20px;
         }
 
-        /* 头像呼吸光晕 */
         .avatar-glow {
             box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
             animation: pulse-blue 2s infinite;
@@ -140,13 +130,11 @@
 </head>
 <body class="antialiased selection:bg-blue-100 selection:text-blue-900">
 
-    <!-- 动态背景 -->
     <div class="tech-bg">
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
 
-    <!-- 导航栏 (参考图片风格，简洁) -->
     <nav class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="font-bold text-xl tracking-tight text-slate-800">ZHANG JUNHUA <span class="text-blue-500">.</span></div>
@@ -159,29 +147,24 @@
         </div>
     </nav>
 
-    <!-- 主容器 -->
     <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
         
-        <!-- Hero 区域 -->
         <div class="grid md:grid-cols-2 gap-12 items-center min-h-[70vh]">
-            <!-- 左侧：文字 -->
             <div class="space-y-8 animate-fade-in-up">
                 <div class="space-y-4">
-                    <h2 class="text-lg font-semibold text-slate-500 tracking-wide uppercase">运营主管 / 4年教培实战</h2>
+                    <h2 class="text-lg font-semibold text-slate-500 tracking-wide uppercase">运营主管 /运营全周期实战经验</h2>
                     <h1 class="text-5xl md:text-6xl font-bold text-slate-900 leading-tight">
                         数据驱动增长，<br>
                         <span class="gradient-text" id="typewriter"></span><span class="cursor"></span>
                     </h1>
                 </div>
                 
-                <!-- 个人简介 (参考上传图片风格) -->
                 <div class="relative pl-6 border-l-4 border-blue-500/30 py-2">
                     <p class="text-slate-600 text-lg leading-relaxed">
                         4年教培行业一线教师、产品运营及1年组内项目运营主管经验，独立负责过十余项从0到1的项目全周期管理。擅长将“教学思维”转化为“运营策略”，以数据为锚，内容为帆，驱动业务持续增长。
                     </p>
                 </div>
 
-                <!-- 核心数据卡片 -->
                 <div class="flex gap-6 pt-4">
                     <div class="glass-card p-4 rounded-xl flex-1 text-center hover:-translate-y-1 transition duration-300">
                         <div class="text-3xl font-bold text-blue-600">4<span class="text-sm text-slate-400">+</span></div>
@@ -205,20 +188,36 @@
                 </div>
             </div>
 
-            <!-- 右侧：头像 (参考图片圆形风格) -->
+            <!-- 右侧：头像区域 -->
             <div class="relative flex justify-center md:justify-end">
                 <div class="relative w-80 h-80 md:w-96 md:h-96">
-                    <!-- 背景装饰圆环 -->
+                    <!-- 背景装饰光环 -->
                     <div class="absolute inset-0 rounded-full border border-blue-100 scale-110"></div>
                     <div class="absolute inset-0 rounded-full border border-purple-100 scale-125 opacity-50"></div>
                     
                     <!-- 头像容器 -->
-                    <div class="avatar-glow w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10 bg-gray-200">
-                        <!-- 请确保图片文件名为 IMG_8637.jpg -->
-                        <img src="IMG_8637.jpg" alt="张隽华" class="w-full h-full object-cover">
+                    <div class="avatar-glow w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10 bg-white">
+                        <!-- 
+                            核心修改：智能图片加载 
+                            1. 优先尝试加载 IMG_8637.jpg
+                            2. 失败尝试加载 IMG_8637.JPG
+                            3. 失败尝试加载 img_8637.jpg
+                            4. 如果都失败，显示文字提示
+                        -->
+                        <img id="avatar-img" 
+                             src="IMG_8637.jpg" 
+                             alt="张隽华照片" 
+                             class="w-full h-full object-cover"
+                             onerror="handleImageError(this)">
+                        
+                        <!-- 如果图片完全加载失败显示的提示（平时隐藏） -->
+                        <div id="avatar-fallback" class="hidden absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-gray-50 text-slate-400">
+                            <i class="fas fa-user-circle text-6xl mb-2"></i>
+                            <span class="text-sm">未找到图片<br>请上传 IMG_8637.jpg</span>
+                        </div>
                     </div>
 
-                    <!-- 悬浮标签装饰 -->
+                    <!-- 悬浮标签 -->
                     <div class="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-lg shadow-lg z-20 flex items-center gap-2 animate-bounce" style="animation-duration: 3s;">
                         <div class="w-2 h-2 rounded-full bg-green-500"></div>
                         <span class="text-sm font-bold text-slate-700">随时到岗</span>
@@ -227,7 +226,6 @@
             </div>
         </div>
 
-        <!-- 总结展示区域 (参考图片 Grid 布局) -->
         <div class="mt-24" id="summary">
             <h3 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-2">
                 <i class="fas fa-briefcase text-blue-500"></i>
@@ -235,7 +233,6 @@
             </h3>
             
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- 卡片 1 -->
                 <div class="glass-card rounded-2xl p-8 hover:border-blue-300 transition group cursor-pointer" onclick="toggleDrawer()">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -254,7 +251,6 @@
                     </div>
                 </div>
 
-                <!-- 卡片 2 -->
                 <div class="glass-card rounded-2xl p-8 hover:border-purple-300 transition group cursor-pointer" onclick="toggleDrawer()">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -283,7 +279,6 @@
 
     </main>
 
-    <!-- 侧边抽屉：完整简历内容 (覆盖层) -->
     <div id="drawer-overlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="toggleDrawer()"></div>
     
     <div id="resume-drawer" class="drawer fixed top-0 right-0 h-full w-full md:w-[600px] bg-white shadow-2xl z-50 overflow-y-auto hide-scrollbar p-8 md:p-12">
@@ -291,9 +286,7 @@
             <i class="fas fa-times text-xl"></i>
         </button>
 
-        <!-- 简历正文内容 (来自PDF) -->
         <div class="space-y-10">
-            <!-- 头部信息 -->
             <div class="border-b border-gray-100 pb-6">
                 <h2 class="text-3xl font-bold text-slate-900 mb-2">张隽华</h2>
                 <div class="text-blue-600 font-medium mb-4">运营主管 | 4年经验 | 随时到岗</div>
@@ -304,25 +297,22 @@
                 </div>
             </div>
 
-            <!-- 核心优势 -->
             <section>
                 <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
                     <span class="w-1 h-5 bg-blue-500 rounded-full"></span> 核心优势
                 </h3>
                 <div class="bg-blue-50/50 p-4 rounded-xl text-sm text-slate-700 leading-relaxed">
                     <p class="mb-2"><strong>全链路实战：</strong> 4年教育行业项目运营经验，兼具一线教学与管理背景。精通低成本运营、项目从0-1立项及跨部门整合。</p>
-                    <p><strong>数据驱动：</strong> 擅长通过数据拆解优化流量分配及销售承接路径，主导30+项目招生转化目标持续达标，平均超额完成115%。</p>
+                    <p><strong>数据驱动：</strong> 擅长通过精细化运营与标准化SOP提升人效，主导30+项目招生转化目标持续达标，平均超额完成115%。</p>
                 </div>
             </section>
 
-            <!-- 工作经历 -->
             <section>
                 <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
                     <span class="w-1 h-5 bg-blue-500 rounded-full"></span> 工作经历
                 </h3>
                 
                 <div class="relative pl-4 border-l-2 border-slate-100 space-y-8">
-                    <!-- 工作 1 -->
                     <div class="relative">
                         <div class="absolute -left-[21px] top-1 w-3 h-3 bg-blue-500 rounded-full ring-4 ring-white"></div>
                         <div class="flex justify-between items-baseline mb-2">
@@ -338,7 +328,6 @@
                         </ul>
                     </div>
 
-                    <!-- 工作 2 -->
                     <div class="relative">
                         <div class="absolute -left-[21px] top-1 w-3 h-3 bg-slate-300 rounded-full ring-4 ring-white"></div>
                         <div class="flex justify-between items-baseline mb-2">
@@ -351,7 +340,6 @@
                 </div>
             </section>
 
-            <!-- 项目经历 -->
             <section>
                 <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
                     <span class="w-1 h-5 bg-blue-500 rounded-full"></span> 重点项目
@@ -384,7 +372,6 @@
                 </div>
             </section>
 
-            <!-- 教育与技能 -->
             <section class="grid grid-cols-2 gap-6">
                 <div>
                     <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
@@ -416,7 +403,6 @@
     </div>
 
     <script>
-        // 打字机特效逻辑
         const textElement = document.getElementById('typewriter');
         const phrases = ["懂用户", "懂产品", "懂运营"];
         let phraseIndex = 0;
@@ -439,7 +425,7 @@
 
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true;
-                typeSpeed = 2000; // 停顿时间
+                typeSpeed = 2000;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -451,7 +437,6 @@
 
         document.addEventListener('DOMContentLoaded', type);
 
-        // 抽屉开关逻辑
         const drawer = document.getElementById('resume-drawer');
         const overlay = document.getElementById('drawer-overlay');
 
@@ -465,6 +450,40 @@
                 drawer.classList.add('open');
                 overlay.classList.remove('hidden');
                 setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            }
+        }
+
+        // 智能图片加载逻辑
+        function handleImageError(img) {
+            const originalSrc = img.src;
+            // 获取文件名，例如 "IMG_8637.jpg"
+            const filename = originalSrc.split('/').pop();
+            
+            // 尝试列表
+            const attempts = [
+                'IMG_8637.JPG', // 大写
+                'img_8637.jpg', // 小写
+                'Img_8637.jpg', // 首字母大写
+                'IMG_8637.jpeg', // jpeg后缀
+                'IMG_8637.png'   // png后缀
+            ];
+
+            // 检查当前是否已经在尝试列表中
+            // 如果还没尝试过，就开始尝试
+            if (!img.dataset.attemptIndex) {
+                img.dataset.attemptIndex = 0;
+            }
+
+            const index = parseInt(img.dataset.attemptIndex);
+
+            if (index < attempts.length) {
+                img.src = attempts[index];
+                img.dataset.attemptIndex = index + 1;
+            } else {
+                // 如果所有尝试都失败了，显示文字提示
+                img.style.display = 'none';
+                document.getElementById('avatar-fallback').classList.remove('hidden');
+                console.error('All image load attempts failed. Please ensure the file exists.');
             }
         }
     </script>
