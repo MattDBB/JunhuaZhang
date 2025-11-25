@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张隽华 - 资深运营主管简历</title>
+    <!-- 引入 Tailwind CSS 进行快速样式开发 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 FontAwesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* 参考上传图片的配色风格：干净的背景 + 科技蓝/紫色点缀 */
+            --primary-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            --text-gradient: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc; /* 极浅的灰白色背景，参考上传图片 */
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* 动态波浪背景 - 模拟 AI 科技感 */
+        .tech-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08), transparent 25%), 
+                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 25%);
+            overflow: hidden;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%233b82f6" fill-opacity="0.05" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            animation: waveMove 20s linear infinite;
+        }
+        
+        .wave:nth-child(2) {
+            bottom: -10px;
+            opacity: 0.7;
+            animation: waveMove 15s linear infinite reverse;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%238b5cf6" fill-opacity="0.05" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,106.7C672,117,768,171,864,197.3C960,224,1056,224,1152,197.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        }
+
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-2%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* 渐变字体类 */
+        .gradient-text {
+            background: var(--text-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        /* 打字机光标 */
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background-color: #3b82f6;
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* 磨砂玻璃卡片 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        /* 侧边栏抽屉动画 */
+        .drawer {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .drawer.open {
+            transform: translateX(0);
+        }
+        
+        /* 隐藏滚动条但保留功能 */
+        .hide-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .hide-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 20px;
+        }
+
+        /* 头像呼吸光晕 */
+        .avatar-glow {
+            box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+            animation: pulse-blue 2s infinite;
+        }
+        
+        @keyframes pulse-blue {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- 动态背景 -->
+    <div class="tech-bg">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <!-- 导航栏 (参考图片风格，简洁) -->
+    <nav class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="font-bold text-xl tracking-tight text-slate-800">ZHANG JUNHUA <span class="text-blue-500">.</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition">关于</a>
+                <a href="#summary" class="hover:text-blue-600 transition">经历</a>
+                <a href="#projects" class="hover:text-blue-600 transition">项目</a>
+                <button onclick="toggleDrawer()" class="text-blue-600 hover:text-blue-700 font-semibold">完整简历</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主容器 -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        
+        <!-- Hero 区域 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center min-h-[70vh]">
+            <!-- 左侧：文字 -->
+            <div class="space-y-8 animate-fade-in-up">
+                <div class="space-y-4">
+                    <h2 class="text-lg font-semibold text-slate-500 tracking-wide uppercase">运营主管 / 4年教培实战</h2>
+                    <h1 class="text-5xl md:text-6xl font-bold text-slate-900 leading-tight">
+                        数据驱动增长，<br>
+                        <span class="gradient-text" id="typewriter"></span><span class="cursor"></span>
+                    </h1>
+                </div>
+                
+                <!-- 个人简介 (参考上传图片风格) -->
+                <div class="relative pl-6 border-l-4 border-blue-500/30 py-2">
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        4年教培行业一线教师、产品运营及1年组内项目运营主管经验，独立负责过十余项从0到1的项目全周期管理。擅长将“教学思维”转化为“运营策略”，以数据为锚，内容为帆，驱动业务持续增长。
+                    </p>
+                </div>
+
+                <!-- 核心数据卡片 -->
+                <div class="flex gap-6 pt-4">
+                    <div class="glass-card p-4 rounded-xl flex-1 text-center hover:-translate-y-1 transition duration-300">
+                        <div class="text-3xl font-bold text-blue-600">4<span class="text-sm text-slate-400">+</span></div>
+                        <div class="text-sm text-slate-500 font-medium">年行业经验</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl flex-1 text-center hover:-translate-y-1 transition duration-300">
+                        <div class="text-3xl font-bold text-purple-600">30<span class="text-sm text-slate-400">+</span></div>
+                        <div class="text-sm text-slate-500 font-medium">主导项目</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl flex-1 text-center hover:-translate-y-1 transition duration-300">
+                        <div class="text-3xl font-bold text-pink-600">115<span class="text-sm text-slate-400">%</span></div>
+                        <div class="text-sm text-slate-500 font-medium">平均目标达成</div>
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <button onclick="toggleDrawer()" class="group bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+                        了解更多详细经历
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 右侧：头像 (参考图片圆形风格) -->
+            <div class="relative flex justify-center md:justify-end">
+                <div class="relative w-80 h-80 md:w-96 md:h-96">
+                    <!-- 背景装饰圆环 -->
+                    <div class="absolute inset-0 rounded-full border border-blue-100 scale-110"></div>
+                    <div class="absolute inset-0 rounded-full border border-purple-100 scale-125 opacity-50"></div>
+                    
+                    <!-- 头像容器 -->
+                    <div class="avatar-glow w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10 bg-gray-200">
+                        <!-- 请确保图片文件名为 IMG_8637.jpg -->
+                        <img src="IMG_8637.jpg" alt="张隽华" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- 悬浮标签装饰 -->
+                    <div class="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-lg shadow-lg z-20 flex items-center gap-2 animate-bounce" style="animation-duration: 3s;">
+                        <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                        <span class="text-sm font-bold text-slate-700">随时到岗</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 总结展示区域 (参考图片 Grid 布局) -->
+        <div class="mt-24" id="summary">
+            <h3 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-2">
+                <i class="fas fa-briefcase text-blue-500"></i>
+                工作与项目速览
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 卡片 1 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-blue-300 transition group cursor-pointer" onclick="toggleDrawer()">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition">项目运营主管</h4>
+                            <p class="text-slate-500 text-sm">上海昂立教育培训有限公司 | 2021 - 至今</p>
+                        </div>
+                        <span class="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded">Core</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        主导超30个初中英语学科招生引流项目。统筹“流量获客-销售承接-学员转化”协同链路，通过建立SOP及风控机制，实现项目交付率100%。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">团队管理</span>
+                        <span class="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">SOP搭建</span>
+                        <span class="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">数据分析</span>
+                    </div>
+                </div>
+
+                <!-- 卡片 2 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-purple-300 transition group cursor-pointer" onclick="toggleDrawer()">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-800 group-hover:text-purple-600 transition">2025 中考冲刺项目</h4>
+                            <p class="text-slate-500 text-sm">项目负责人 | 2024.11 - 2025.06</p>
+                        </div>
+                        <span class="bg-purple-50 text-purple-600 text-xs px-2 py-1 rounded">Star Project</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        针对上海中考节点，设计“阶梯转化体系”，开发“全市模考排名器”工具。最终获客 4000+，完成率 130%，同比增长 400%。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">产品孵化</span>
+                        <span class="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">增长黑客</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-slate-400 text-sm">想要查看完整履历细节？</p>
+                <button onclick="toggleDrawer()" class="mt-2 text-blue-600 font-semibold hover:underline">
+                    点击展开完整简历 <i class="fas fa-chevron-down ml-1"></i>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 侧边抽屉：完整简历内容 (覆盖层) -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="toggleDrawer()"></div>
+    
+    <div id="resume-drawer" class="drawer fixed top-0 right-0 h-full w-full md:w-[600px] bg-white shadow-2xl z-50 overflow-y-auto hide-scrollbar p-8 md:p-12">
+        <button onclick="toggleDrawer()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-800 p-2">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+
+        <!-- 简历正文内容 (来自PDF) -->
+        <div class="space-y-10">
+            <!-- 头部信息 -->
+            <div class="border-b border-gray-100 pb-6">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">张隽华</h2>
+                <div class="text-blue-600 font-medium mb-4">运营主管 | 4年经验 | 随时到岗</div>
+                <div class="flex flex-wrap gap-4 text-sm text-slate-500">
+                    <span class="flex items-center gap-1"><i class="fas fa-phone-alt"></i> 17317385563</span>
+                    <span class="flex items-center gap-1"><i class="fas fa-envelope"></i> 982387112@qq.com</span>
+                    <span class="flex items-center gap-1"><i class="fas fa-map-marker-alt"></i> 上海</span>
+                </div>
+            </div>
+
+            <!-- 核心优势 -->
+            <section>
+                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-blue-500 rounded-full"></span> 核心优势
+                </h3>
+                <div class="bg-blue-50/50 p-4 rounded-xl text-sm text-slate-700 leading-relaxed">
+                    <p class="mb-2"><strong>全链路实战：</strong> 4年教育行业项目运营经验，兼具一线教学与管理背景。精通低成本运营、项目从0-1立项及跨部门整合。</p>
+                    <p><strong>数据驱动：</strong> 擅长通过数据拆解优化流量分配及销售承接路径，主导30+项目招生转化目标持续达标，平均超额完成115%。</p>
+                </div>
+            </section>
+
+            <!-- 工作经历 -->
+            <section>
+                <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-blue-500 rounded-full"></span> 工作经历
+                </h3>
+                
+                <div class="relative pl-4 border-l-2 border-slate-100 space-y-8">
+                    <!-- 工作 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-[21px] top-1 w-3 h-3 bg-blue-500 rounded-full ring-4 ring-white"></div>
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="font-bold text-slate-800">上海昂立教育培训有限公司</h4>
+                            <span class="text-xs text-slate-500 font-mono">2021.04 - 至今</span>
+                        </div>
+                        <div class="text-sm font-semibold text-blue-600 mb-3">中学事业部初中英语组 · 项目运营主管</div>
+                        <ul class="list-disc list-outside ml-4 text-sm text-slate-600 space-y-2">
+                            <li><strong>产品策划：</strong> 深入分析“升学痛点”，搭建“市场获客-教研出课-销售转化”全链路协同体系。</li>
+                            <li><strong>项目统筹：</strong> 基于转化漏斗数据明确优先级（如中考冲刺季），采用倒推法制定计划，锁定关键里程碑。</li>
+                            <li><strong>进度管控：</strong> 建立“日/周常运营复盘会”，拉通三方信息，解决协作滞后问题，确保项目100%按期上线。</li>
+                            <li><strong>质量管理：</strong> 建立“教学内容+销售转化”双重标准，通过用户调研修正夸大宣传，提升学员满意度15%。</li>
+                        </ul>
+                    </div>
+
+                    <!-- 工作 2 -->
+                    <div class="relative">
+                        <div class="absolute -left-[21px] top-1 w-3 h-3 bg-slate-300 rounded-full ring-4 ring-white"></div>
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="font-bold text-slate-800">中国金谷国际信托有限责任公司</h4>
+                            <span class="text-xs text-slate-500 font-mono">2020.06 - 2020.12</span>
+                        </div>
+                        <div class="text-sm font-semibold text-slate-500 mb-3">投资经理助理（实习）</div>
+                        <p class="text-sm text-slate-600">参与设计和发行信托产品，负责撰写尽调报告及交易结构设计。与团队共同完成四个非标类主动管理项目。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 项目经历 -->
+            <section>
+                <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-blue-500 rounded-full"></span> 重点项目
+                </h3>
+
+                <div class="space-y-6">
+                    <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-slate-800">2025年“中考冲刺班”运营战役</h4>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">负责人</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">2024.11 - 2025.06</p>
+                        <div class="text-sm text-slate-600 space-y-2">
+                            <p><strong>核心动作：</strong> 设计阶梯转化体系，开发“全市模考排名器”作为引流钩子；主导二模解析直播，单场触达超2000人。</p>
+                            <p class="text-blue-600 font-medium">成果：获客4000+，完成率130%，同比增长400%。</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-slate-800">“外刊专项课”产品孵化（0-1）</h4>
+                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">创新项目</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">2025.01 - 2025.06</p>
+                        <div class="text-sm text-slate-600 space-y-2">
+                            <p><strong>核心动作：</strong> 通过AB Test验证“考题映射”卖点；搭建直播营销脚本及控退机制。</p>
+                            <p class="text-purple-600 font-medium">成果：转化指标完成率105%，成功开辟新流量入口。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教育与技能 -->
+            <section class="grid grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="w-1 h-5 bg-blue-500 rounded-full"></span> 教育背景
+                    </h3>
+                    <div class="text-sm">
+                        <div class="font-bold text-slate-800">美国南犹他大学</div>
+                        <div class="text-slate-500">金融学 本科 (GPA 3.7/4.0)</div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="w-1 h-5 bg-blue-500 rounded-full"></span> 技能栈
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-100 rounded text-xs text-slate-600">Python</span>
+                        <span class="px-2 py-1 bg-gray-100 rounded text-xs text-slate-600">SQL</span>
+                        <span class="px-2 py-1 bg-gray-100 rounded text-xs text-slate-600">Tableau</span>
+                        <span class="px-2 py-1 bg-gray-100 rounded text-xs text-slate-600">SOP搭建</span>
+                        <span class="px-2 py-1 bg-gray-100 rounded text-xs text-slate-600">私域运营</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="mt-12 pt-6 border-t border-gray-100 text-center text-slate-400 text-sm">
+            © 2025 张隽华 Resume
+        </div>
+    </div>
+
+    <script>
+        // 打字机特效逻辑
+        const textElement = document.getElementById('typewriter');
+        const phrases = ["懂用户", "懂产品", "懂运营"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 150;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 100;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 200;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // 停顿时间
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', type);
+
+        // 抽屉开关逻辑
+        const drawer = document.getElementById('resume-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            const isOpen = drawer.classList.contains('open');
+            if (isOpen) {
+                drawer.classList.remove('open');
+                overlay.classList.add('hidden');
+                setTimeout(() => overlay.classList.remove('opacity-100'), 0);
+            } else {
+                drawer.classList.add('open');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            }
+        }
+    </script>
+</body>
+</html>
